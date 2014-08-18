@@ -1,5 +1,7 @@
 package Bio::RNA::SpliceSites::Scoring::SpliceModels::splice5sequences;
 
+our $VERSION = '0.02';
+
 our $table = {
   AAAAAAA => 0 ,
   AAAAAAC => 1 ,
@@ -16388,3 +16390,57 @@ our $table = {
 };
 
 1;
+
+
+__END__
+
+=head1 NAME
+
+Bio::RNA::SpliceSites::Scoring::SpliceModels::splice5sequences - 5' splice site data submodule for  pre-mRNA splice site scoring by the maxEntScan algorithm of Gene Yeo and Chris Burge.
+
+=head1 SYNOPSIS
+
+#This module is not intended for direct use, instead 5'ss scoring should be called through the Bio::RNA::SpliceSites::Scoring::MaxEntScan module, which uses this data submodule for splice site scoring.
+
+=head1 DESCRIPTION
+
+This module contains a preparsed data structure for 5'ss scoring by the maxEntScan algorithm of Yeo and Burge.
+
+=head2 EXPORT
+
+None.
+
+=head1 SEE ALSO
+
+Bio::RNA::SpliceSites::Scoring::MaxEntScan
+
+The data contained within this data submodule originated with the maxEntScan programs distributed by Chris Burge, PhD and Gene Yeo, PhD.  
+
+J Comput biol. 2004;11(2-3):377-94
+Maximum entropy modeling of short sequence motifs with applications to RNA splicing signals.
+Yeo G, Burge CB
+PMID: 15285897
+
+=head1 AUTHOR
+
+Brian Sebastian Cole, E<lt>colebr@mail.med.upenn.eduE<gt>
+
+=head1 COPYRIGHT AND LICENSE
+
+maxEntScan algorithm:
+Copyright (C) 2004 by Gene Yeo and Chris Burge
+
+This distrubtion:
+Copyright (C) 2014 by Brian Sebastian Cole
+
+This library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself, either Perl version 5.14.2 or,
+at your option, any later version of Perl 5 you may have available.
+
+=head1 ACKNOWLEDGEMENTS
+
+The author would like to acknowledge the support of his thesis advisor Dr. Kristen Lynch, PhD.
+
+Thanks go to John Karr of the Philadelphia Perl Mongers for the sagacious suggestion of using data submodules to hold splice models.
+
+=cut
