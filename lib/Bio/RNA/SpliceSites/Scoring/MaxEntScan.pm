@@ -17,7 +17,7 @@ our @ISA = qw/ Exporter /;
 my $functions = [ qw/ score5 score3 / ];
 our %EXPORT_TAGS = ( 'all' => $functions , );
 our @EXPORT_OK = ( @{ $EXPORT_TAGS{'all'} } );
-our $VERSION = '0.02';
+our $VERSION = '0.04';
 
 sub log2 {
   my $number = shift;

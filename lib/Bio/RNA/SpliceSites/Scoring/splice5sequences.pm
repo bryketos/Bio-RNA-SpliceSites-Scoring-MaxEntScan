@@ -1,6 +1,6 @@
 package Bio::RNA::SpliceSites::Scoring::SpliceModels::splice5sequences;
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 our $table = {
   AAAAAAA => 0 ,

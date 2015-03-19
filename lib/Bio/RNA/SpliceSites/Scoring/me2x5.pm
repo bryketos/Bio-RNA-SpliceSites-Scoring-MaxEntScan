@@ -1,6 +1,6 @@
 package Bio::RNA::SpliceSites::Scoring::SpliceModels::me2x5;
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 our $table = [
   1.4359596e-01 ,
