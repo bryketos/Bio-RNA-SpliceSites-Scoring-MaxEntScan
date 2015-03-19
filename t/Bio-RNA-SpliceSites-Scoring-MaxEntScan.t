@@ -7,9 +7,9 @@ BEGIN {
   use_ok( 'Bio::RNA::SpliceSites::Scoring::MaxEntScan' , qw/ score5 / );
   use_ok( 'Bio::RNA::SpliceSites::Scoring::MaxEntScan' , qw/ score3 / );
   use_ok( 'Bio::RNA::SpliceSites::Scoring::MaxEntScan' , qw/ :all   / );
-  use_ok( 'Bio::RNA::SpliceSites::Scoring::SpliceModels::splice5sequences' );
-  use_ok( 'Bio::RNA::SpliceSites::Scoring::SpliceModels::me2x5' );
-  use_ok( 'Bio::RNA::SpliceSites::Scoring::SpliceModels::me2x3acc' );
+  use_ok( 'Bio::RNA::SpliceSites::Scoring::splice5sequences' );
+  use_ok( 'Bio::RNA::SpliceSites::Scoring::me2x5' );
+  use_ok( 'Bio::RNA::SpliceSites::Scoring::me2x3acc' );
 };
 
 pass( "Beginning test suite...\n" );

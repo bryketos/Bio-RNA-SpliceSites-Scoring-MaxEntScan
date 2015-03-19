@@ -1,7 +1,7 @@
 # This Makefile is for the Bio::RNA::SpliceSites::Scoring::MaxEntScan extension to perl.
 #
 # It was generated automatically by MakeMaker version
-# 6.98 (Revision: 69800) from the contents of
+# 6.57_05 (Revision: 65705) from the contents of
 # Makefile.PL. Don't edit this file, edit Makefile.PL instead.
 #
 #       ANY CHANGES MADE HERE WILL BE LOST!
@@ -20,7 +20,6 @@
 #     NAME => q[Bio::RNA::SpliceSites::Scoring::MaxEntScan]
 #     PL_FILES => {  }
 #     PREREQ_PM => { Test::More=>q[0] }
-#     TEST_REQUIRES => {  }
 #     VERSION_FROM => q[lib/Bio/RNA/SpliceSites/Scoring/MaxEntScan.pm]
 #     clean => { FILES=>q[Bio-RNA-SpliceSites-Scoring-MaxEntScan-*] }
 #     dist => { COMPRESS=>q[gzip -9f], SUFFIX=>q[gz] }
@@ -30,30 +29,30 @@
 
 # --- MakeMaker const_config section:
 
-# These definitions are from config.sh (via /usr/lib/perl/5.14/Config.pm).
+# These definitions are from config.sh (via /usr/lib/perl5/5.14/x86_64-cygwin-threads/Config.pm).
 # They may have been overridden via Makefile.PL or on the command line.
 AR = ar
-CC = cc
-CCCDLFLAGS = -fPIC
-CCDLFLAGS = -Wl,-E
-DLEXT = so
+CC = gcc
+CCCDLFLAGS =  
+CCDLFLAGS =  
+DLEXT = dll
 DLSRC = dl_dlopen.xs
-EXE_EXT = 
+EXE_EXT = .exe
 FULL_AR = /usr/bin/ar
-LD = cc
-LDDLFLAGS = -shared -L/usr/local/lib -fstack-protector
-LDFLAGS =  -fstack-protector -L/usr/local/lib
-LIBC = 
+LD = g++
+LDDLFLAGS =  --shared  -Wl,--enable-auto-import -Wl,--export-all-symbols -Wl,--enable-auto-image-base -fstack-protector
+LDFLAGS =  -Wl,--enable-auto-import -Wl,--export-all-symbols -Wl,--enable-auto-image-base -fstack-protector
+LIBC = /usr/lib/libc.a
 LIB_EXT = .a
 OBJ_EXT = .o
-OSNAME = linux
-OSVERS = 3.2.0-37-generic
+OSNAME = cygwin
+OSVERS = 1.7.18\(0.26353\)
 RANLIB = :
-SITELIBEXP = /usr/local/share/perl/5.14.2
-SITEARCHEXP = /usr/local/lib/perl/5.14.2
-SO = so
-VENDORARCHEXP = /usr/lib/perl5
-VENDORLIBEXP = /usr/share/perl5
+SITELIBEXP = /usr/lib/perl5/site_perl/5.14
+SITEARCHEXP = /usr/lib/perl5/site_perl/5.14/x86_64-cygwin-threads
+SO = dll
+VENDORARCHEXP = /usr/lib/perl5/vendor_perl/5.14/x86_64-cygwin-threads
+VENDORLIBEXP = /usr/lib/perl5/vendor_perl/5.14
 
 
 # --- MakeMaker constants section:
@@ -62,11 +61,11 @@ DIRFILESEP = /
 DFSEP = $(DIRFILESEP)
 NAME = Bio::RNA::SpliceSites::Scoring::MaxEntScan
 NAME_SYM = Bio_RNA_SpliceSites_Scoring_MaxEntScan
-VERSION = 0.02
+VERSION = 0.03
 VERSION_MACRO = VERSION
-VERSION_SYM = 0_02
+VERSION_SYM = 0_03
 DEFINE_VERSION = -D$(VERSION_MACRO)=\"$(VERSION)\"
-XS_VERSION = 0.02
+XS_VERSION = 0.03
 XS_VERSION_MACRO = XS_VERSION
 XS_DEFINE_VERSION = -D$(XS_VERSION_MACRO)=\"$(XS_VERSION)\"
 INST_ARCHLIB = blib/arch
@@ -75,58 +74,60 @@ INST_BIN = blib/bin
 INST_LIB = blib/lib
 INST_MAN1DIR = blib/man1
 INST_MAN3DIR = blib/man3
-MAN1EXT = 1p
+MAN1EXT = 1
 MAN3EXT = 3pm
 INSTALLDIRS = site
-INSTALL_BASE = /home/brian/perl5
 DESTDIR = 
-PREFIX = $(INSTALL_BASE)
-INSTALLPRIVLIB = $(INSTALL_BASE)/lib/perl5
+PREFIX = $(SITEPREFIX)
+PERLPREFIX = /usr
+SITEPREFIX = /usr
+VENDORPREFIX = /usr
+INSTALLPRIVLIB = /usr/lib/perl5/5.14
 DESTINSTALLPRIVLIB = $(DESTDIR)$(INSTALLPRIVLIB)
-INSTALLSITELIB = $(INSTALL_BASE)/lib/perl5
+INSTALLSITELIB = /usr/lib/perl5/site_perl/5.14
 DESTINSTALLSITELIB = $(DESTDIR)$(INSTALLSITELIB)
-INSTALLVENDORLIB = $(INSTALL_BASE)/lib/perl5
+INSTALLVENDORLIB = /usr/lib/perl5/vendor_perl/5.14
 DESTINSTALLVENDORLIB = $(DESTDIR)$(INSTALLVENDORLIB)
-INSTALLARCHLIB = $(INSTALL_BASE)/lib/perl5/x86_64-linux-gnu-thread-multi
+INSTALLARCHLIB = /usr/lib/perl5/5.14/x86_64-cygwin-threads
 DESTINSTALLARCHLIB = $(DESTDIR)$(INSTALLARCHLIB)
-INSTALLSITEARCH = $(INSTALL_BASE)/lib/perl5/x86_64-linux-gnu-thread-multi
+INSTALLSITEARCH = /usr/lib/perl5/site_perl/5.14/x86_64-cygwin-threads
 DESTINSTALLSITEARCH = $(DESTDIR)$(INSTALLSITEARCH)
-INSTALLVENDORARCH = $(INSTALL_BASE)/lib/perl5/x86_64-linux-gnu-thread-multi
+INSTALLVENDORARCH = /usr/lib/perl5/vendor_perl/5.14/x86_64-cygwin-threads
 DESTINSTALLVENDORARCH = $(DESTDIR)$(INSTALLVENDORARCH)
-INSTALLBIN = $(INSTALL_BASE)/bin
+INSTALLBIN = /usr/bin
 DESTINSTALLBIN = $(DESTDIR)$(INSTALLBIN)
-INSTALLSITEBIN = $(INSTALL_BASE)/bin
+INSTALLSITEBIN = /usr/local/bin
 DESTINSTALLSITEBIN = $(DESTDIR)$(INSTALLSITEBIN)
-INSTALLVENDORBIN = $(INSTALL_BASE)/bin
+INSTALLVENDORBIN = /usr/bin
 DESTINSTALLVENDORBIN = $(DESTDIR)$(INSTALLVENDORBIN)
-INSTALLSCRIPT = $(INSTALL_BASE)/bin
+INSTALLSCRIPT = /usr/bin
 DESTINSTALLSCRIPT = $(DESTDIR)$(INSTALLSCRIPT)
-INSTALLSITESCRIPT = $(INSTALL_BASE)/bin
+INSTALLSITESCRIPT = /usr/local/bin
 DESTINSTALLSITESCRIPT = $(DESTDIR)$(INSTALLSITESCRIPT)
-INSTALLVENDORSCRIPT = $(INSTALL_BASE)/bin
+INSTALLVENDORSCRIPT = /usr/bin
 DESTINSTALLVENDORSCRIPT = $(DESTDIR)$(INSTALLVENDORSCRIPT)
-INSTALLMAN1DIR = $(INSTALL_BASE)/man/man1
+INSTALLMAN1DIR = /usr/share/man/man1
 DESTINSTALLMAN1DIR = $(DESTDIR)$(INSTALLMAN1DIR)
-INSTALLSITEMAN1DIR = $(INSTALL_BASE)/man/man1
+INSTALLSITEMAN1DIR = /usr/share/man/man1
 DESTINSTALLSITEMAN1DIR = $(DESTDIR)$(INSTALLSITEMAN1DIR)
-INSTALLVENDORMAN1DIR = $(INSTALL_BASE)/man/man1
+INSTALLVENDORMAN1DIR = /usr/share/man/man1
 DESTINSTALLVENDORMAN1DIR = $(DESTDIR)$(INSTALLVENDORMAN1DIR)
-INSTALLMAN3DIR = $(INSTALL_BASE)/man/man3
+INSTALLMAN3DIR = /usr/share/man/man3
 DESTINSTALLMAN3DIR = $(DESTDIR)$(INSTALLMAN3DIR)
-INSTALLSITEMAN3DIR = $(INSTALL_BASE)/man/man3
+INSTALLSITEMAN3DIR = /usr/share/man/man3
 DESTINSTALLSITEMAN3DIR = $(DESTDIR)$(INSTALLSITEMAN3DIR)
-INSTALLVENDORMAN3DIR = $(INSTALL_BASE)/man/man3
+INSTALLVENDORMAN3DIR = /usr/share/man/man3
 DESTINSTALLVENDORMAN3DIR = $(DESTDIR)$(INSTALLVENDORMAN3DIR)
-PERL_LIB = /usr/share/perl/5.14
-PERL_ARCHLIB = /usr/lib/perl/5.14
+PERL_LIB = /usr/lib/perl5/5.14
+PERL_ARCHLIB = /usr/lib/perl5/5.14/x86_64-cygwin-threads
 LIBPERL_A = libperl.a
 FIRST_MAKEFILE = Makefile
 MAKEFILE_OLD = Makefile.old
 MAKE_APERL_FILE = Makefile.aperl
 PERLMAINCC = $(CC)
-PERL_INC = /usr/lib/perl/5.14/CORE
-PERL = /usr/bin/perl
-FULLPERL = /usr/bin/perl
+PERL_INC = /usr/lib/perl5/5.14/x86_64-cygwin-threads/CORE
+PERL = /usr/bin/perl.exe
+FULLPERL = /usr/bin/perl.exe
 ABSPERL = $(PERL)
 PERLRUN = $(PERL)
 FULLPERLRUN = $(FULLPERL)
@@ -139,9 +140,9 @@ PERM_DIR = 755
 PERM_RW = 644
 PERM_RWX = 755
 
-MAKEMAKER   = /usr/local/share/perl/5.14.2/ExtUtils/MakeMaker.pm
-MM_VERSION  = 6.98
-MM_REVISION = 69800
+MAKEMAKER   = /usr/lib/perl5/5.14/ExtUtils/MakeMaker.pm
+MM_VERSION  = 6.57_05
+MM_REVISION = 65705
 
 # FULLEXT = Pathname for extension directory (eg Foo/Bar/Oracle).
 # BASEEXT = Basename part of FULLEXT. May be just equal FULLEXT. (eg Oracle)
@@ -165,9 +166,9 @@ O_FILES  =
 H_FILES  = 
 MAN1PODS = 
 MAN3PODS = lib/Bio/RNA/SpliceSites/Scoring/MaxEntScan.pm \
-	lib/Bio/RNA/SpliceSites/Scoring/SpliceModels/me2x3acc.pm \
-	lib/Bio/RNA/SpliceSites/Scoring/SpliceModels/me2x5.pm \
-	lib/Bio/RNA/SpliceSites/Scoring/SpliceModels/splice5sequences.pm
+	lib/Bio/RNA/SpliceSites/Scoring/me2x3acc.pm \
+	lib/Bio/RNA/SpliceSites/Scoring/me2x5.pm \
+	lib/Bio/RNA/SpliceSites/Scoring/splice5sequences.pm
 
 # Where is the Config information that we are using/depend on
 CONFIGDEP = $(PERL_ARCHLIB)$(DFSEP)Config.pm $(PERL_INC)$(DFSEP)config.h
@@ -185,33 +186,33 @@ INST_BOOT        =
 
 # Extra linker info
 EXPORT_LIST        = 
-PERL_ARCHIVE       = 
+PERL_ARCHIVE       = $(PERL_INC)/cygperl5_14.dll
 PERL_ARCHIVE_AFTER = 
 
 
 TO_INST_PM = lib/Bio/RNA/SpliceSites/Scoring/MaxEntScan.pm \
-	lib/Bio/RNA/SpliceSites/Scoring/SpliceModels/me2x3acc.pm \
-	lib/Bio/RNA/SpliceSites/Scoring/SpliceModels/me2x5.pm \
-	lib/Bio/RNA/SpliceSites/Scoring/SpliceModels/splice5sequences.pm
+	lib/Bio/RNA/SpliceSites/Scoring/me2x3acc.pm \
+	lib/Bio/RNA/SpliceSites/Scoring/me2x5.pm \
+	lib/Bio/RNA/SpliceSites/Scoring/splice5sequences.pm
 
-PM_TO_BLIB = lib/Bio/RNA/SpliceSites/Scoring/MaxEntScan.pm \
+PM_TO_BLIB = lib/Bio/RNA/SpliceSites/Scoring/splice5sequences.pm \
+	blib/lib/Bio/RNA/SpliceSites/Scoring/splice5sequences.pm \
+	lib/Bio/RNA/SpliceSites/Scoring/MaxEntScan.pm \
 	blib/lib/Bio/RNA/SpliceSites/Scoring/MaxEntScan.pm \
-	lib/Bio/RNA/SpliceSites/Scoring/SpliceModels/me2x3acc.pm \
-	blib/lib/Bio/RNA/SpliceSites/Scoring/SpliceModels/me2x3acc.pm \
-	lib/Bio/RNA/SpliceSites/Scoring/SpliceModels/me2x5.pm \
-	blib/lib/Bio/RNA/SpliceSites/Scoring/SpliceModels/me2x5.pm \
-	lib/Bio/RNA/SpliceSites/Scoring/SpliceModels/splice5sequences.pm \
-	blib/lib/Bio/RNA/SpliceSites/Scoring/SpliceModels/splice5sequences.pm
+	lib/Bio/RNA/SpliceSites/Scoring/me2x3acc.pm \
+	blib/lib/Bio/RNA/SpliceSites/Scoring/me2x3acc.pm \
+	lib/Bio/RNA/SpliceSites/Scoring/me2x5.pm \
+	blib/lib/Bio/RNA/SpliceSites/Scoring/me2x5.pm
 
 
 # --- MakeMaker platform_constants section:
-MM_Unix_VERSION = 6.98
+MM_Unix_VERSION = 6.57_05
 PERL_MALLOC_DEF = -DPERL_EXTMALLOC_DEF -Dmalloc=Perl_malloc -Dfree=Perl_mfree -Drealloc=Perl_realloc -Dcalloc=Perl_calloc
 
 
 # --- MakeMaker tool_autosplit section:
 # Usage: $(AUTOSPLITFILE) FileToSplit AutoDirToSplitInto
-AUTOSPLITFILE = $(ABSPERLRUN)  -e 'use AutoSplit;  autosplit($$$$ARGV[0], $$$$ARGV[1], 0, 1, 1)' --
+AUTOSPLITFILE = $(ABSPERLRUN)  -e 'use AutoSplit;  autosplit($$ARGV[0], $$ARGV[1], 0, 1, 1)' --
 
 
 
@@ -247,7 +248,6 @@ MACROSTART =
 MACROEND = 
 USEMAKEFILE = -f
 FIXIN = $(ABSPERLRUN) -MExtUtils::MY -e 'MY->fixin(shift)' --
-CP_NONEMPTY = $(ABSPERLRUN) -MExtUtils::Command::MM -e 'cp_nonempty' --
 
 
 # --- MakeMaker makemakerdflt section:
@@ -261,7 +261,7 @@ TARFLAGS = cvf
 ZIP = zip
 ZIPFLAGS = -r
 COMPRESS = gzip -9f
-SUFFIX = .gz
+SUFFIX = gz
 SHAR = shar
 PREOP = $(NOECHO) $(NOOP)
 POSTOP = $(NOECHO) $(NOOP)
@@ -271,7 +271,7 @@ RCS_LABEL = rcs -Nv$(VERSION_SYM): -q
 DIST_CP = best
 DIST_DEFAULT = tardist
 DISTNAME = Bio-RNA-SpliceSites-Scoring-MaxEntScan
-DISTVNAME = Bio-RNA-SpliceSites-Scoring-MaxEntScan-0.02
+DISTVNAME = Bio-RNA-SpliceSites-Scoring-MaxEntScan-0.03
 
 
 # --- MakeMaker macro section:
@@ -296,8 +296,7 @@ DISTVNAME = Bio-RNA-SpliceSites-Scoring-MaxEntScan-0.02
 
 PASTHRU = LIBPERL_A="$(LIBPERL_A)"\
 	LINKTYPE="$(LINKTYPE)"\
-	PREFIX="$(PREFIX)"\
-	INSTALL_BASE="$(INSTALL_BASE)"
+	PREFIX="$(PREFIX)"
 
 
 # --- MakeMaker special_targets section:
@@ -393,15 +392,15 @@ linkext :: $(LINKTYPE)
 # --- MakeMaker dlsyms section:
 
 
+# --- MakeMaker dynamic section:
+
+dynamic :: $(FIRST_MAKEFILE) $(INST_DYNAMIC) $(INST_BOOT)
+	$(NOECHO) $(NOOP)
+
+
 # --- MakeMaker dynamic_bs section:
 
 BOOTSTRAP =
-
-
-# --- MakeMaker dynamic section:
-
-dynamic :: $(FIRST_MAKEFILE) $(BOOTSTRAP) $(INST_DYNAMIC)
-	$(NOECHO) $(NOOP)
 
 
 # --- MakeMaker dynamic_lib section:
@@ -425,15 +424,15 @@ POD2MAN = $(POD2MAN_EXE)
 
 
 manifypods : pure_all  \
+	lib/Bio/RNA/SpliceSites/Scoring/splice5sequences.pm \
 	lib/Bio/RNA/SpliceSites/Scoring/MaxEntScan.pm \
-	lib/Bio/RNA/SpliceSites/Scoring/SpliceModels/me2x3acc.pm \
-	lib/Bio/RNA/SpliceSites/Scoring/SpliceModels/me2x5.pm \
-	lib/Bio/RNA/SpliceSites/Scoring/SpliceModels/splice5sequences.pm
+	lib/Bio/RNA/SpliceSites/Scoring/me2x3acc.pm \
+	lib/Bio/RNA/SpliceSites/Scoring/me2x5.pm
 	$(NOECHO) $(POD2MAN) --section=3 --perm_rw=$(PERM_RW) \
-	  lib/Bio/RNA/SpliceSites/Scoring/MaxEntScan.pm $(INST_MAN3DIR)/Bio::RNA::SpliceSites::Scoring::MaxEntScan.$(MAN3EXT) \
-	  lib/Bio/RNA/SpliceSites/Scoring/SpliceModels/me2x3acc.pm $(INST_MAN3DIR)/Bio::RNA::SpliceSites::Scoring::SpliceModels::me2x3acc.$(MAN3EXT) \
-	  lib/Bio/RNA/SpliceSites/Scoring/SpliceModels/me2x5.pm $(INST_MAN3DIR)/Bio::RNA::SpliceSites::Scoring::SpliceModels::me2x5.$(MAN3EXT) \
-	  lib/Bio/RNA/SpliceSites/Scoring/SpliceModels/splice5sequences.pm $(INST_MAN3DIR)/Bio::RNA::SpliceSites::Scoring::SpliceModels::splice5sequences.$(MAN3EXT) 
+	  lib/Bio/RNA/SpliceSites/Scoring/splice5sequences.pm $(INST_MAN3DIR)/Bio.RNA.SpliceSites.Scoring.splice5sequences.$(MAN3EXT) \
+	  lib/Bio/RNA/SpliceSites/Scoring/MaxEntScan.pm $(INST_MAN3DIR)/Bio.RNA.SpliceSites.Scoring.MaxEntScan.$(MAN3EXT) \
+	  lib/Bio/RNA/SpliceSites/Scoring/me2x3acc.pm $(INST_MAN3DIR)/Bio.RNA.SpliceSites.Scoring.me2x3acc.$(MAN3EXT) \
+	  lib/Bio/RNA/SpliceSites/Scoring/me2x5.pm $(INST_MAN3DIR)/Bio.RNA.SpliceSites.Scoring.me2x5.$(MAN3EXT) 
 
 
 
@@ -460,25 +459,23 @@ clean_subdirs :
 
 clean :: clean_subdirs
 	- $(RM_F) \
-	  $(BASEEXT).bso $(BASEEXT).def \
-	  $(BASEEXT).exp $(BASEEXT).x \
-	  $(BOOTSTRAP) $(INST_ARCHAUTODIR)/extralibs.all \
-	  $(INST_ARCHAUTODIR)/extralibs.ld $(MAKE_APERL_FILE) \
-	  *$(LIB_EXT) *$(OBJ_EXT) \
-	  *perl.core MYMETA.json \
-	  MYMETA.yml blibdirs.ts \
-	  core core.*perl.*.? \
-	  core.[0-9] core.[0-9][0-9] \
-	  core.[0-9][0-9][0-9] core.[0-9][0-9][0-9][0-9] \
-	  core.[0-9][0-9][0-9][0-9][0-9] lib$(BASEEXT).def \
-	  mon.out perl \
-	  perl$(EXE_EXT) perl.exe \
-	  perlmain.c pm_to_blib \
-	  pm_to_blib.ts so_locations \
-	  tmon.out 
+	  *$(LIB_EXT) core \
+	  core.[0-9] $(INST_ARCHAUTODIR)/extralibs.all \
+	  core.[0-9][0-9] $(BASEEXT).bso \
+	  pm_to_blib.ts core.[0-9][0-9][0-9][0-9] \
+	  MYMETA.yml $(BASEEXT).x \
+	  $(BOOTSTRAP) perl$(EXE_EXT) \
+	  tmon.out *$(OBJ_EXT) \
+	  pm_to_blib $(INST_ARCHAUTODIR)/extralibs.ld \
+	  blibdirs.ts core.[0-9][0-9][0-9][0-9][0-9] \
+	  *perl.core core.*perl.*.? \
+	  $(MAKE_APERL_FILE) $(BASEEXT).def \
+	  perl core.[0-9][0-9][0-9] \
+	  mon.out lib$(BASEEXT).def \
+	  perlmain.c perl.exe \
+	  so_locations $(BASEEXT).exp 
 	- $(RM_RF) \
 	  Bio-RNA-SpliceSites-Scoring-MaxEntScan-* blib 
-	  $(NOECHO) $(RM_F) $(MAKEFILE_OLD)
 	- $(MV) $(FIRST_MAKEFILE) $(MAKEFILE_OLD) $(DEV_NULL)
 
 
@@ -499,72 +496,29 @@ realclean purge ::  clean realclean_subdirs
 # --- MakeMaker metafile section:
 metafile : create_distdir
 	$(NOECHO) $(ECHO) Generating META.yml
-	$(NOECHO) $(ECHO) '---' > META_new.yml
-	$(NOECHO) $(ECHO) 'abstract: '\''Perl module for pre-mRNA splice site scoring by the maxEntScan algorithm of Gene Yeo and Chris Burge.'\''' >> META_new.yml
+	$(NOECHO) $(ECHO) '--- #YAML:1.0' > META_new.yml
+	$(NOECHO) $(ECHO) 'name:               Bio-RNA-SpliceSites-Scoring-MaxEntScan' >> META_new.yml
+	$(NOECHO) $(ECHO) 'version:            0.03' >> META_new.yml
+	$(NOECHO) $(ECHO) 'abstract:           Perl module for pre-mRNA splice site scoring by the maxEntScan algorithm of Gene Yeo and Chris Burge.' >> META_new.yml
 	$(NOECHO) $(ECHO) 'author:' >> META_new.yml
-	$(NOECHO) $(ECHO) '  - '\''Brian Sebastian Cole <bryketos@cpan.org>'\''' >> META_new.yml
-	$(NOECHO) $(ECHO) 'build_requires:' >> META_new.yml
-	$(NOECHO) $(ECHO) '  Test::More: '\''0'\''' >> META_new.yml
+	$(NOECHO) $(ECHO) '    - Brian Sebastian Cole <bryketos@cpan.org>' >> META_new.yml
+	$(NOECHO) $(ECHO) 'license:            Artistic_2_0' >> META_new.yml
+	$(NOECHO) $(ECHO) 'distribution_type:  module' >> META_new.yml
 	$(NOECHO) $(ECHO) 'configure_requires:' >> META_new.yml
-	$(NOECHO) $(ECHO) '  ExtUtils::MakeMaker: '\''0'\''' >> META_new.yml
-	$(NOECHO) $(ECHO) 'dynamic_config: 1' >> META_new.yml
-	$(NOECHO) $(ECHO) 'generated_by: '\''ExtUtils::MakeMaker version 6.98, CPAN::Meta::Converter version 2.142060'\''' >> META_new.yml
-	$(NOECHO) $(ECHO) 'license: unknown' >> META_new.yml
-	$(NOECHO) $(ECHO) 'meta-spec:' >> META_new.yml
-	$(NOECHO) $(ECHO) '  url: http://module-build.sourceforge.net/META-spec-v1.4.html' >> META_new.yml
-	$(NOECHO) $(ECHO) '  version: '\''1.4'\''' >> META_new.yml
-	$(NOECHO) $(ECHO) 'name: Bio-RNA-SpliceSites-Scoring-MaxEntScan' >> META_new.yml
-	$(NOECHO) $(ECHO) 'no_index:' >> META_new.yml
-	$(NOECHO) $(ECHO) '  directory:' >> META_new.yml
-	$(NOECHO) $(ECHO) '    - t' >> META_new.yml
-	$(NOECHO) $(ECHO) '    - inc' >> META_new.yml
+	$(NOECHO) $(ECHO) '    ExtUtils::MakeMaker:  0' >> META_new.yml
+	$(NOECHO) $(ECHO) 'build_requires:' >> META_new.yml
+	$(NOECHO) $(ECHO) '    Test::More:  0' >> META_new.yml
 	$(NOECHO) $(ECHO) 'requires:' >> META_new.yml
-	$(NOECHO) $(ECHO) '  perl: '\''5.006'\''' >> META_new.yml
-	$(NOECHO) $(ECHO) 'version: '\''0.02'\''' >> META_new.yml
+	$(NOECHO) $(ECHO) '    perl:  5.006' >> META_new.yml
+	$(NOECHO) $(ECHO) 'no_index:' >> META_new.yml
+	$(NOECHO) $(ECHO) '    directory:' >> META_new.yml
+	$(NOECHO) $(ECHO) '        - t' >> META_new.yml
+	$(NOECHO) $(ECHO) '        - inc' >> META_new.yml
+	$(NOECHO) $(ECHO) 'generated_by:       ExtUtils::MakeMaker version 6.57_05' >> META_new.yml
+	$(NOECHO) $(ECHO) 'meta-spec:' >> META_new.yml
+	$(NOECHO) $(ECHO) '    url:      http://module-build.sourceforge.net/META-spec-v1.4.html' >> META_new.yml
+	$(NOECHO) $(ECHO) '    version:  1.4' >> META_new.yml
 	-$(NOECHO) $(MV) META_new.yml $(DISTVNAME)/META.yml
-	$(NOECHO) $(ECHO) Generating META.json
-	$(NOECHO) $(ECHO) '{' > META_new.json
-	$(NOECHO) $(ECHO) '   "abstract" : "Perl module for pre-mRNA splice site scoring by the maxEntScan algorithm of Gene Yeo and Chris Burge.",' >> META_new.json
-	$(NOECHO) $(ECHO) '   "author" : [' >> META_new.json
-	$(NOECHO) $(ECHO) '      "Brian Sebastian Cole <bryketos@cpan.org>"' >> META_new.json
-	$(NOECHO) $(ECHO) '   ],' >> META_new.json
-	$(NOECHO) $(ECHO) '   "dynamic_config" : 1,' >> META_new.json
-	$(NOECHO) $(ECHO) '   "generated_by" : "ExtUtils::MakeMaker version 6.98, CPAN::Meta::Converter version 2.142060",' >> META_new.json
-	$(NOECHO) $(ECHO) '   "license" : [' >> META_new.json
-	$(NOECHO) $(ECHO) '      "unknown"' >> META_new.json
-	$(NOECHO) $(ECHO) '   ],' >> META_new.json
-	$(NOECHO) $(ECHO) '   "meta-spec" : {' >> META_new.json
-	$(NOECHO) $(ECHO) '      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",' >> META_new.json
-	$(NOECHO) $(ECHO) '      "version" : "2"' >> META_new.json
-	$(NOECHO) $(ECHO) '   },' >> META_new.json
-	$(NOECHO) $(ECHO) '   "name" : "Bio-RNA-SpliceSites-Scoring-MaxEntScan",' >> META_new.json
-	$(NOECHO) $(ECHO) '   "no_index" : {' >> META_new.json
-	$(NOECHO) $(ECHO) '      "directory" : [' >> META_new.json
-	$(NOECHO) $(ECHO) '         "t",' >> META_new.json
-	$(NOECHO) $(ECHO) '         "inc"' >> META_new.json
-	$(NOECHO) $(ECHO) '      ]' >> META_new.json
-	$(NOECHO) $(ECHO) '   },' >> META_new.json
-	$(NOECHO) $(ECHO) '   "prereqs" : {' >> META_new.json
-	$(NOECHO) $(ECHO) '      "build" : {' >> META_new.json
-	$(NOECHO) $(ECHO) '         "requires" : {' >> META_new.json
-	$(NOECHO) $(ECHO) '            "Test::More" : "0"' >> META_new.json
-	$(NOECHO) $(ECHO) '         }' >> META_new.json
-	$(NOECHO) $(ECHO) '      },' >> META_new.json
-	$(NOECHO) $(ECHO) '      "configure" : {' >> META_new.json
-	$(NOECHO) $(ECHO) '         "requires" : {' >> META_new.json
-	$(NOECHO) $(ECHO) '            "ExtUtils::MakeMaker" : "0"' >> META_new.json
-	$(NOECHO) $(ECHO) '         }' >> META_new.json
-	$(NOECHO) $(ECHO) '      },' >> META_new.json
-	$(NOECHO) $(ECHO) '      "runtime" : {' >> META_new.json
-	$(NOECHO) $(ECHO) '         "requires" : {' >> META_new.json
-	$(NOECHO) $(ECHO) '            "perl" : "5.006"' >> META_new.json
-	$(NOECHO) $(ECHO) '         }' >> META_new.json
-	$(NOECHO) $(ECHO) '      }' >> META_new.json
-	$(NOECHO) $(ECHO) '   },' >> META_new.json
-	$(NOECHO) $(ECHO) '   "release_status" : "stable",' >> META_new.json
-	$(NOECHO) $(ECHO) '   "version" : "0.02"' >> META_new.json
-	$(NOECHO) $(ECHO) '}' >> META_new.json
-	-$(NOECHO) $(MV) META_new.json $(DISTVNAME)/META.json
 
 
 # --- MakeMaker signature section:
@@ -586,7 +540,7 @@ manifest :
 	$(PERLRUN) "-MExtUtils::Manifest=mkmanifest" -e mkmanifest
 
 veryclean : realclean
-	$(RM_F) *~ */*~ *.orig */*.orig *.bak */*.bak *.old */*.old
+	$(RM_F) *~ */*~ *.orig */*.orig *.bak */*.bak *.old */*.old 
 
 
 
@@ -601,7 +555,6 @@ tardist : $(DISTVNAME).tar$(SUFFIX)
 
 uutardist : $(DISTVNAME).tar$(SUFFIX)
 	uuencode $(DISTVNAME).tar$(SUFFIX) $(DISTVNAME).tar$(SUFFIX) > $(DISTVNAME).tar$(SUFFIX)_uu
-	$(NOECHO) $(ECHO) 'Created $(DISTVNAME).tar$(SUFFIX)_uu'
 
 $(DISTVNAME).tar$(SUFFIX) : distdir
 	$(PREOP)
@@ -609,7 +562,6 @@ $(DISTVNAME).tar$(SUFFIX) : distdir
 	$(TAR) $(TARFLAGS) $(DISTVNAME).tar $(DISTVNAME)
 	$(RM_RF) $(DISTVNAME)
 	$(COMPRESS) $(DISTVNAME).tar
-	$(NOECHO) $(ECHO) 'Created $(DISTVNAME).tar$(SUFFIX)'
 	$(POSTOP)
 
 zipdist : $(DISTVNAME).zip
@@ -619,14 +571,12 @@ $(DISTVNAME).zip : distdir
 	$(PREOP)
 	$(ZIP) $(ZIPFLAGS) $(DISTVNAME).zip $(DISTVNAME)
 	$(RM_RF) $(DISTVNAME)
-	$(NOECHO) $(ECHO) 'Created $(DISTVNAME).zip'
 	$(POSTOP)
 
 shdist : distdir
 	$(PREOP)
 	$(SHAR) $(DISTVNAME) > $(DISTVNAME).shar
 	$(RM_RF) $(DISTVNAME)
-	$(NOECHO) $(ECHO) 'Created $(DISTVNAME).shar'
 	$(POSTOP)
 
 
@@ -660,19 +610,15 @@ ci :
 
 # --- MakeMaker distmeta section:
 distmeta : create_distdir metafile
-	$(NOECHO) cd $(DISTVNAME) && $(ABSPERLRUN) -MExtUtils::Manifest=maniadd -e 'exit unless -e q{META.yml};' \
-	  -e 'eval { maniadd({q{META.yml} => q{Module YAML meta-data (added by MakeMaker)}}) }' \
-	  -e '    or print "Could not add META.yml to MANIFEST: $$$${'\''@'\''}\n"' --
-	$(NOECHO) cd $(DISTVNAME) && $(ABSPERLRUN) -MExtUtils::Manifest=maniadd -e 'exit unless -f q{META.json};' \
-	  -e 'eval { maniadd({q{META.json} => q{Module JSON meta-data (added by MakeMaker)}}) }' \
-	  -e '    or print "Could not add META.json to MANIFEST: $$$${'\''@'\''}\n"' --
+	$(NOECHO) cd $(DISTVNAME) && $(ABSPERLRUN) -MExtUtils::Manifest=maniadd -e 'eval { maniadd({q{META.yml} => q{Module meta-data (added by MakeMaker)}}) } ' \
+	  -e '    or print "Could not add META.yml to MANIFEST: $${'\''@'\''}\n"' --
 
 
 
 # --- MakeMaker distsignature section:
 distsignature : create_distdir
-	$(NOECHO) cd $(DISTVNAME) && $(ABSPERLRUN) -MExtUtils::Manifest=maniadd -e 'eval { maniadd({q{SIGNATURE} => q{Public-key signature (added by MakeMaker)}}) }' \
-	  -e '    or print "Could not add SIGNATURE to MANIFEST: $$$${'\''@'\''}\n"' --
+	$(NOECHO) cd $(DISTVNAME) && $(ABSPERLRUN) -MExtUtils::Manifest=maniadd -e 'eval { maniadd({q{SIGNATURE} => q{Public-key signature (added by MakeMaker)}}) } ' \
+	  -e '    or print "Could not add SIGNATURE to MANIFEST: $${'\''@'\''}\n"' --
 	$(NOECHO) cd $(DISTVNAME) && $(TOUCH) SIGNATURE
 	cd $(DISTVNAME) && cpansign -s
 
@@ -741,7 +687,6 @@ pure_vendor_install :: all
 		$(INST_SCRIPT) $(DESTINSTALLVENDORSCRIPT) \
 		$(INST_MAN1DIR) $(DESTINSTALLVENDORMAN1DIR) \
 		$(INST_MAN3DIR) $(DESTINSTALLVENDORMAN3DIR)
-
 
 doc_perl_install :: all
 	$(NOECHO) $(ECHO) Appending installation info to $(DESTINSTALLARCHLIB)/perllocal.pod
@@ -819,7 +764,7 @@ $(FIRST_MAKEFILE) : Makefile.PL $(CONFIGDEP)
 
 # --- MakeMaker makeaperl section ---
 MAP_TARGET    = perl
-FULLPERL      = /usr/bin/perl
+FULLPERL      = /usr/bin/perl.exe
 
 $(MAP_TARGET) :: static $(MAKE_APERL_FILE)
 	$(MAKE) $(USEMAKEFILE) $(MAKE_APERL_FILE) $@
@@ -849,7 +794,7 @@ subdirs-test ::
 
 
 test_dynamic :: pure_all
-	PERL_DL_NONLAZY=1 $(FULLPERLRUN) "-MExtUtils::Command::MM" "-MTest::Harness" "-e" "undef *Test::Harness::Switches; test_harness($(TEST_VERBOSE), '$(INST_LIB)', '$(INST_ARCHLIB)')" $(TEST_FILES)
+	PERL_DL_NONLAZY=1 $(FULLPERLRUN) "-MExtUtils::Command::MM" "-e" "test_harness($(TEST_VERBOSE), '$(INST_LIB)', '$(INST_ARCHLIB)')" $(TEST_FILES)
 
 testdb_dynamic :: pure_all
 	PERL_DL_NONLAZY=1 $(FULLPERLRUN) $(TESTDB_SW) "-I$(INST_LIB)" "-I$(INST_ARCHLIB)" $(TEST_FILE)
@@ -863,12 +808,12 @@ testdb_static :: testdb_dynamic
 # --- MakeMaker ppd section:
 # Creates a PPD (Perl Package Description) for a binary distribution.
 ppd :
-	$(NOECHO) $(ECHO) '<SOFTPKG NAME="$(DISTNAME)" VERSION="$(VERSION)">' > $(DISTNAME).ppd
+	$(NOECHO) $(ECHO) '<SOFTPKG NAME="$(DISTNAME)" VERSION="0.03">' > $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '    <ABSTRACT>Perl module for pre-mRNA splice site scoring by the maxEntScan algorithm of Gene Yeo and Chris Burge.</ABSTRACT>' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '    <AUTHOR>Brian Sebastian Cole &lt;bryketos@cpan.org&gt;</AUTHOR>' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '    <IMPLEMENTATION>' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '        <PERLCORE VERSION="5,006,0,0" />' >> $(DISTNAME).ppd
-	$(NOECHO) $(ECHO) '        <ARCHITECTURE NAME="x86_64-linux-gnu-thread-multi-5.14" />' >> $(DISTNAME).ppd
+	$(NOECHO) $(ECHO) '        <ARCHITECTURE NAME="cygwin-thread-multi-5.14" />' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '        <CODEBASE HREF="" />' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '    </IMPLEMENTATION>' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '</SOFTPKG>' >> $(DISTNAME).ppd
@@ -878,10 +823,10 @@ ppd :
 
 pm_to_blib : $(FIRST_MAKEFILE) $(TO_INST_PM)
 	$(NOECHO) $(ABSPERLRUN) -MExtUtils::Install -e 'pm_to_blib({@ARGV}, '\''$(INST_LIB)/auto'\'', q[$(PM_FILTER)], '\''$(PERM_DIR)'\'')' -- \
+	  lib/Bio/RNA/SpliceSites/Scoring/splice5sequences.pm blib/lib/Bio/RNA/SpliceSites/Scoring/splice5sequences.pm \
 	  lib/Bio/RNA/SpliceSites/Scoring/MaxEntScan.pm blib/lib/Bio/RNA/SpliceSites/Scoring/MaxEntScan.pm \
-	  lib/Bio/RNA/SpliceSites/Scoring/SpliceModels/me2x3acc.pm blib/lib/Bio/RNA/SpliceSites/Scoring/SpliceModels/me2x3acc.pm \
-	  lib/Bio/RNA/SpliceSites/Scoring/SpliceModels/me2x5.pm blib/lib/Bio/RNA/SpliceSites/Scoring/SpliceModels/me2x5.pm \
-	  lib/Bio/RNA/SpliceSites/Scoring/SpliceModels/splice5sequences.pm blib/lib/Bio/RNA/SpliceSites/Scoring/SpliceModels/splice5sequences.pm 
+	  lib/Bio/RNA/SpliceSites/Scoring/me2x3acc.pm blib/lib/Bio/RNA/SpliceSites/Scoring/me2x3acc.pm \
+	  lib/Bio/RNA/SpliceSites/Scoring/me2x5.pm blib/lib/Bio/RNA/SpliceSites/Scoring/me2x5.pm 
 	$(NOECHO) $(TOUCH) pm_to_blib
 
 
