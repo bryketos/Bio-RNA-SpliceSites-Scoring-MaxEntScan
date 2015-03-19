@@ -323,7 +323,7 @@ maxEntScan algorithm:
 Copyright (C) 2004 by Gene Yeo and Chris Burge
 
 This distrubtion:
-Copyright (C) 2014 by Brian Sebastian Cole
+Copyright (C) 2014,2015 by Brian Sebastian Cole
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself, either Perl version 5.14.2 or,

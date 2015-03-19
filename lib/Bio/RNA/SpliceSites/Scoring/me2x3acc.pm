@@ -2,7 +2,7 @@ package Bio::RNA::SpliceSites::Scoring::SpliceModels::me2x3acc;
 
 #This data-only module contains a reference to an array of hashes for each me2x3acc[1-9] datafile, as created by the maxEntScan score3.pl subroutine named makemaxentscores()
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 our $table = [
   {
